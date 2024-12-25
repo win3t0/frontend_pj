@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키오스크[기말]</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">DIT SOFTWARE</h1>
+        <div class="categories">
+            <button class="category_btn" data-category="all">전체</button>
+            <button class="category_btn" data-category="food">음식</button>
+            <button class="category_btn" data-category="beverage">음료</button>
+        </div>
+
+        <div class="menu_area" id="menu_area"></div>
+        <div class="bottom_area">
+            <div class="cart_area" id="cart_area" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>장바구니</h2>
+                <p>메뉴를 드래그하여 장바구니에 놓아주세요.<br>취소를 원하실 경우 물품의 수량을 0으로 만들어주세요.</br></p>
+                <div id="cart_items"></div>
+                <div class="cart_total">
+                    총합: ₩<span id="total_price">0</span>
+                </div>
+
+                <button id="payment">결제하기</button>
+                <div id="receipt_modal" class="hidden">
+                    <div id="receipt_content"></div>
+                    <button id="close_receipt">확인</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>
